@@ -1,0 +1,24 @@
+﻿/* ✅ Keep sections stable and visible */
+section {
+    background-color: #000; /* or whatever your actual dark background is */
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ✅ Scroll animation only affects visible child elements */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: var(--delay, 0s);
+    will-change: transform, opacity;
+}
+
+/* ✅ Final keyframe */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
